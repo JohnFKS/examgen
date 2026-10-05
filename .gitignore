@@ -1,0 +1,47 @@
+# ===== 依赖 / 系统 =====
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+*.log
+fake.log
+
+# ===== 本地配置与凭据（settings.json 会落 llm.apiKey，绝不入库）=====
+.env
+.env.local
+config/settings.json
+
+# ===== 输入语料：第三方教辅的 OCR 文本，不发布 =====
+# 使用者自备 date1/ 语料后 `node src/cli.js index` 即可装配
+date1/
+date1.rar
+*.rar
+*.zip
+
+# ===== 运行态（模板库 / 拆解 / 匹配 / 内容寻址缓存 / 质检报告数据）=====
+data/
+
+# ===== 测试模式工作包（input.md 与 answer.json 内嵌题面与解析原文）=====
+agent-work/
+agent-work-backup/
+
+# ===== 章节实测脚本留档（内嵌题号、题面与解析摘录）=====
+tools/exemplars-ch*/
+tools/exemplars-cross/
+
+# ===== 本地留档与会话产物 =====
+.trash/
+.chrome-profile/
+tmp/
+tunnel/
+
+# ===== output/ 里的两份"整册转储"不是归纳产物，属语料再分发，单独排除 =====
+# （手册 / 模板库 / 拆解记录 / 校验报告 / 浏览器验证截图照常入库）
+output/题库.json
+output/题库对照解析.md
+
+# ===== 编辑器 / 工具 =====
+.vscode/
+.idea/
+.zcodeignore

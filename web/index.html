@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>考研数学万能通法自动归纳系统</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app" id="app">
+
+  <!-- ============ 左侧导航 ============ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-title">万能通法归纳</div>
+      <div class="brand-sub">考研数学自动归纳系统</div>
+    </div>
+    <nav class="nav" id="navList">
+      <a class="nav-item" href="#/overview" data-route="overview">
+        <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/></svg></span>
+        <span class="nav-text">总览</span>
+      </a>
+      <a class="nav-item" href="#/sources" data-route="sources">
+        <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 3 7l9 4 9-4-9-4Z"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/></svg></span>
+        <span class="nav-text">数据源</span>
+      </a>
+      <a class="nav-item" href="#/problems" data-route="problems">
+        <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1.4"/><circle cx="4" cy="12" r="1.4"/><circle cx="4" cy="18" r="1.4"/></svg></span>
+        <span class="nav-text">题库</span>
+      </a>
+      <a class="nav-item" href="#/library" data-route="library">
+        <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="7" height="5.5" rx="1.2"/><rect x="14" y="3" width="7" height="5.5" rx="1.2"/><rect x="8.5" y="15.5" width="7" height="5.5" rx="1.2"/><path d="M6.5 8.5v3.5h11V8.5M12 12v3.5"/></svg></span>
+        <span class="nav-text">模板库</span>
+      </a>
+      <a class="nav-item" href="#/runs" data-route="runs">
+        <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5z"/></svg></span>
+        <span class="nav-text">运行</span>
+      </a>
+      <a class="nav-item" href="#/qa" data-route="qa">
+        <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 3v6c0 4-2.8 7-7 9-4.2-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <span class="nav-text">校验</span>
+      </a>
+      <a class="nav-item" href="#/output" data-route="output">
+        <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 7.5h6l2 2.5h10V19H3z"/><path d="M3 7.5V5h6v2.5"/></svg></span>
+        <span class="nav-text">输出</span>
+      </a>
+      <a class="nav-item" href="#/settings" data-route="settings">
+        <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7.5h16M4 16.5h16"/><circle cx="9.5" cy="7.5" r="2.4"/><circle cx="14.5" cy="16.5" r="2.4"/></svg></span>
+        <span class="nav-text">设置</span>
+      </a>
+      <a class="nav-item" href="#/agent" data-route="agent">
+        <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v11H9l-5 4z"/><path d="M9 10h6"/></svg></span>
+        <span class="nav-text">测试模式</span>
+        <span class="nav-badge" id="navAgentBadge" hidden>0</span>
+      </a>
+      <a class="nav-item" href="#/skills" data-route="skills">
+        <span class="nav-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M9 3.5v17M3.5 9h17"/></svg></span>
+        <span class="nav-text">Skill</span>
+      </a>
+    </nav>
+    <div class="side-foot">
+      <div class="side-foot-line">增量式解题方法归纳</div>
+      <div class="side-foot-line">拆解 · 匹配 · 迭代 · 组织 · 校验</div>
+    </div>
+  </aside>
+  <div class="nav-mask" id="navMask" hidden></div>
+
+  <!-- ============ 右侧主区 ============ -->
+  <div class="main">
+    <header class="topbar">
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="切换导航">菜单</button>
+      <div class="page-head">
+        <h1 class="page-title" id="pageTitle">总览</h1>
+        <div class="page-sub" id="pageSub"></div>
+      </div>
+      <div class="statusbar" id="statusBar">
+        <span class="chip chip-mode" id="stMode">模式加载中</span>
+        <span class="chip" id="stModel">模型 —</span>
+        <span class="chip" id="stPending">待作答 —</span>
+        <span class="chip" id="stRunning">空闲</span>
+      </div>
+    </header>
+
+    <main class="content" id="view">
+      <div class="loading">正在加载控制台…</div>
+    </main>
+
+    <footer class="footbar">
+      <span>零依赖纯前端控制台 · 数据全部来自本机后端接口</span>
+      <span class="foot-right" id="footTime"></span>
+    </footer>
+  </div>
+</div>
+
+<div class="toasts" id="toasts"></div>
+<div class="modal-root" id="modalRoot" hidden></div>
+<div class="drawer-root" id="drawerRoot" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>

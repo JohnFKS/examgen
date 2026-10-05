@@ -1,0 +1,212 @@
+{
+  "at": "2026-10-05T06:18:54.791Z",
+  "browser": "Chrome/134.0.6998.165",
+  "app": "http://127.0.0.1:8787",
+  "level1": 18,
+  "views": 10,
+  "rows": [
+    {
+      "view": "overview",
+      "ok": true,
+      "hash": "#/overview",
+      "domLen": 17821,
+      "nodes": 524,
+      "waited": 1072,
+      "miss": [],
+      "ghost": [],
+      "bad": [],
+      "shot": "/workspace/examgen/output/browser/overview.png",
+      "textHead": "万能通法归纳 ⏎ 考研数学自动归纳系统 ⏎ 总览 ⏎ 数据源 ⏎ 题库 ⏎ 模板库 ⏎ 运行 ⏎ 校验 ⏎ 输出 ⏎ 设置 ⏎ 测试模式 ⏎ Skill ⏎ 增量式解题方法归纳 ⏎ 拆解 · 匹配 · 迭代 · 组织 · 校验 ⏎ 总览"
+    },
+    {
+      "view": "sources",
+      "ok": true,
+      "hash": "#/sources",
+      "domLen": 16187,
+      "nodes": 463,
+      "waited": 1770,
+      "miss": [],
+      "ghost": [],
+      "bad": [],
+      "shot": "/workspace/examgen/output/browser/sources.png",
+      "textHead": "万能通法归纳 ⏎ 考研数学自动归纳系统 ⏎ 总览 ⏎ 数据源 ⏎ 题库 ⏎ 模板库 ⏎ 运行 ⏎ 校验 ⏎ 输出 ⏎ 设置 ⏎ 测试模式 ⏎ Skill ⏎ 增量式解题方法归纳 ⏎ 拆解 · 匹配 · 迭代 · 组织 · 校验 ⏎ 数据"
+    },
+    {
+      "view": "problems",
+      "ok": true,
+      "hash": "#/problems",
+      "domLen": 23687,
+      "nodes": 578,
+      "waited": 1769,
+      "miss": [],
+      "ghost": [],
+      "bad": [],
+      "shot": "/workspace/examgen/output/browser/problems.png",
+      "textHead": "万能通法归纳 ⏎ 考研数学自动归纳系统 ⏎ 总览 ⏎ 数据源 ⏎ 题库 ⏎ 模板库 ⏎ 运行 ⏎ 校验 ⏎ 输出 ⏎ 设置 ⏎ 测试模式 ⏎ Skill ⏎ 增量式解题方法归纳 ⏎ 拆解 · 匹配 · 迭代 · 组织 · 校验 ⏎ 题库"
+    },
+    {
+      "view": "library",
+      "ok": true,
+      "hash": "#/library",
+      "domLen": 76629,
+      "nodes": 1877,
+      "waited": 1063,
+      "miss": [],
+      "ghost": [],
+      "bad": [],
+      "shot": "/workspace/examgen/output/browser/library.png",
+      "textHead": "万能通法归纳 ⏎ 考研数学自动归纳系统 ⏎ 总览 ⏎ 数据源 ⏎ 题库 ⏎ 模板库 ⏎ 运行 ⏎ 校验 ⏎ 输出 ⏎ 设置 ⏎ 测试模式 ⏎ Skill ⏎ 增量式解题方法归纳 ⏎ 拆解 · 匹配 · 迭代 · 组织 · 校验 ⏎ 模板"
+    },
+    {
+      "view": "runs",
+      "ok": true,
+      "hash": "#/runs",
+      "domLen": 453075,
+      "nodes": 1137,
+      "waited": 1760,
+      "miss": [],
+      "ghost": [],
+      "bad": [],
+      "shot": "/workspace/examgen/output/browser/runs.png",
+      "textHead": "万能通法归纳 ⏎ 考研数学自动归纳系统 ⏎ 总览 ⏎ 数据源 ⏎ 题库 ⏎ 模板库 ⏎ 运行 ⏎ 校验 ⏎ 输出 ⏎ 设置 ⏎ 测试模式 ⏎ Skill ⏎ 增量式解题方法归纳 ⏎ 拆解 · 匹配 · 迭代 · 组织 · 校验 ⏎ 运行"
+    },
+    {
+      "view": "qa",
+      "ok": true,
+      "hash": "#/qa",
+      "domLen": 15803,
+      "nodes": 447,
+      "waited": 363,
+      "miss": [],
+      "ghost": [],
+      "bad": [],
+      "shot": "/workspace/examgen/output/browser/qa.png",
+      "textHead": "万能通法归纳 ⏎ 考研数学自动归纳系统 ⏎ 总览 ⏎ 数据源 ⏎ 题库 ⏎ 模板库 ⏎ 运行 ⏎ 校验 ⏎ 输出 ⏎ 设置 ⏎ 测试模式 ⏎ Skill ⏎ 增量式解题方法归纳 ⏎ 拆解 · 匹配 · 迭代 · 组织 · 校验 ⏎ 校验"
+    },
+    {
+      "view": "output",
+      "ok": true,
+      "hash": "#/output",
+      "domLen": 131979,
+      "nodes": 1870,
+      "waited": 365,
+      "miss": [],
+      "ghost": [],
+      "bad": [],
+      "shot": "/workspace/examgen/output/browser/output.png",
+      "textHead": "万能通法归纳 ⏎ 考研数学自动归纳系统 ⏎ 总览 ⏎ 数据源 ⏎ 题库 ⏎ 模板库 ⏎ 运行 ⏎ 校验 ⏎ 输出 ⏎ 设置 ⏎ 测试模式 ⏎ Skill ⏎ 增量式解题方法归纳 ⏎ 拆解 · 匹配 · 迭代 · 组织 · 校验 ⏎ 输出"
+    },
+    {
+      "view": "settings",
+      "ok": true,
+      "hash": "#/settings",
+      "domLen": 13053,
+      "nodes": 310,
+      "waited": 1066,
+      "miss": [],
+      "ghost": [],
+      "bad": [],
+      "shot": "/workspace/examgen/output/browser/settings.png",
+      "textHead": "万能通法归纳 ⏎ 考研数学自动归纳系统 ⏎ 总览 ⏎ 数据源 ⏎ 题库 ⏎ 模板库 ⏎ 运行 ⏎ 校验 ⏎ 输出 ⏎ 设置 ⏎ 测试模式 ⏎ Skill ⏎ 增量式解题方法归纳 ⏎ 拆解 · 匹配 · 迭代 · 组织 · 校验 ⏎ 设置"
+    },
+    {
+      "view": "agent",
+      "ok": true,
+      "hash": "#/agent",
+      "domLen": 336696,
+      "nodes": 6309,
+      "waited": 1794,
+      "miss": [],
+      "ghost": [],
+      "bad": [],
+      "shot": "/workspace/examgen/output/browser/agent.png",
+      "textHead": "万能通法归纳 ⏎ 考研数学自动归纳系统 ⏎ 总览 ⏎ 数据源 ⏎ 题库 ⏎ 模板库 ⏎ 运行 ⏎ 校验 ⏎ 输出 ⏎ 设置 ⏎ 测试模式 ⏎ Skill ⏎ 增量式解题方法归纳 ⏎ 拆解 · 匹配 · 迭代 · 组织 · 校验 ⏎ 测试"
+    },
+    {
+      "view": "skills",
+      "ok": true,
+      "hash": "#/skills",
+      "domLen": 13434,
+      "nodes": 328,
+      "waited": 363,
+      "miss": [],
+      "ghost": [],
+      "bad": [],
+      "shot": "/workspace/examgen/output/browser/skills.png",
+      "textHead": "万能通法归纳 ⏎ 考研数学自动归纳系统 ⏎ 总览 ⏎ 数据源 ⏎ 题库 ⏎ 模板库 ⏎ 运行 ⏎ 校验 ⏎ 输出 ⏎ 设置 ⏎ 测试模式 ⏎ Skill ⏎ 增量式解题方法归纳 ⏎ 拆解 · 匹配 · 迭代 · 组织 · 校验 ⏎ Sk"
+    },
+    {
+      "view": "click:overview",
+      "ok": true,
+      "hash": "#/overview",
+      "textHead": "总览"
+    },
+    {
+      "view": "click:sources",
+      "ok": true,
+      "hash": "#/sources",
+      "textHead": "数据源"
+    },
+    {
+      "view": "click:problems",
+      "ok": true,
+      "hash": "#/problems",
+      "textHead": "题库"
+    },
+    {
+      "view": "click:library",
+      "ok": true,
+      "hash": "#/library",
+      "textHead": "模板库"
+    },
+    {
+      "view": "click:runs",
+      "ok": true,
+      "hash": "#/runs",
+      "textHead": "运行"
+    },
+    {
+      "view": "click:qa",
+      "ok": true,
+      "hash": "#/qa",
+      "textHead": "校验"
+    },
+    {
+      "view": "click:output",
+      "ok": true,
+      "hash": "#/output",
+      "textHead": "输出"
+    },
+    {
+      "view": "click:settings",
+      "ok": true,
+      "hash": "#/settings",
+      "textHead": "设置"
+    },
+    {
+      "view": "click:agent",
+      "ok": true,
+      "hash": "#/agent",
+      "textHead": "测试模式"
+    },
+    {
+      "view": "click:skills",
+      "ok": true,
+      "hash": "#/skills",
+      "textHead": "Skill"
+    },
+    {
+      "view": "click:模板卡",
+      "ok": true,
+      "hash": "#/library",
+      "textHead": "ok → #/library"
+    },
+    {
+      "view": "detail:已并入模板",
+      "ok": true,
+      "hash": "#/library/T-LA-01-S",
+      "textHead": "T-LA-01-S → T-LA-67-I（2 跳）"
+    }
+  ],
+  "fails": 0
+}
