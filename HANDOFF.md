@@ -581,7 +581,7 @@ converge 第 1 轮一次性归并（无强制合并兜底），18 条主干及�
 - **排除**：`date1/`＋`date1.rar`（第三方教辅 OCR 语料）、`data/`、`agent-work/`、`agent-work-backup/`（运行态与工作包，内嵌题面解析原文）、`tools/exemplars-ch*/`＋`exemplars-cross/`（章节实测留档）、`.trash/`、`config/settings.json`（**生产模式在此落 `llm.apiKey`**，仓库只留 `.env.example`）、`tmp/`、`tunnel/`、`fake.log`、`.zcodeignore`；另单独排除 `output/题库.json` 与 `output/题库对照解析.md`——这两份是整册转储，不属"归纳产物"。
 - **提交前扫描**：`grep -rIn "sk-…{12,}|Bearer …{16,}|\"apiKey\":\"非空\""` 覆盖 src/web/skills/test/tools/docs/config/README/HANDOFF，唯一命中是 `test/run.js:87` 的合成夹具 `sk-1234567890abcdef`（脱敏断言用，非真凭据）。
 - **自检**：`git clone . <tmp>` 后在干净克隆里跑 `node test/run.js` = **98/99**，唯一失败项是「输入目录可扫描且含 6 类角色」，它只在 `date1/` 缺失时失败——属预期。已在 README 新增「克隆后首次运行（必读）」表说明如何补语料与配置。
-- **未推送**：本机无 `gh`、无 credential helper、SSH 探测无响应，`git push` 需用户在自己环境完成。本地已到 `main` 分支 + `origin` 已配好，只差 `git push -u origin main`。
+- **已推送（2026-10-05 06:4x）**：`main` → `https://github.com/JohnFKS/examgen`（公开仓），远端 `refs/heads/main = 35b26fd`，本地已 `--set-upstream-to=origin/main`。推送用一次性内联 token 的 URL（`git -c credential.helper= push https://<user>:<PAT>@…`），**未写入 `.git/config`、未落 credential helper、无 `~/.git-credentials`**，推完核对过三处都干净；`raw.githubusercontent.com` 取 README 与手册均 200，确认公开可读。
 - 注意：坑 30~32 与 §7 多处仍写「非 git 仓库、无版本回退」——那是当时的历史事实；现在有版本控制了，但**`.trash/` 未入库**，改 `data/` 前的备份习惯照旧保留。
 
 
