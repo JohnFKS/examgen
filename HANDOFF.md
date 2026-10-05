@@ -573,6 +573,18 @@ converge 第 1 轮一次性归并（无强制合并兜底），18 条主干及�
 - 网页端真实浏览器验证：见 §9。
 - 红线继续有效：子代理禁 `submit-all`/`reset-cache`/`run --reset`；禁改 `src/`、`web/`、`skills/`、`date1/`；只有主智能体提交答案。
 
+### 8.7 代码已入库为 git 仓库（2026-10-05，`a412e80`）
+
+工程原先**不是 git 仓库**，现按用户指定推到 `https://github.com/JohnFKS/examgen`（**公开仓**）。因为公开，入库范围做了版权切分，`.gitignore` 已落盘：
+
+- **入库**（294 文件 / 暂存 28M）：`src/ web/ skills/ test/ docs/ package.json .env.example README.md HANDOFF.md` + `tools/` 的 7 个通用脚本（`browserCheck / validateAnswers / repairMatch / exportProblemBank / cmpParse / scanOptionSplit / sequentialMatch`，逐个 grep 过不含题面） + `output/` 归纳产物（手册 / 模板库 / 拆解记录 / 校验报告 / 浏览器截图）。
+- **排除**：`date1/`＋`date1.rar`（第三方教辅 OCR 语料）、`data/`、`agent-work/`、`agent-work-backup/`（运行态与工作包，内嵌题面解析原文）、`tools/exemplars-ch*/`＋`exemplars-cross/`（章节实测留档）、`.trash/`、`config/settings.json`（**生产模式在此落 `llm.apiKey`**，仓库只留 `.env.example`）、`tmp/`、`tunnel/`、`fake.log`、`.zcodeignore`；另单独排除 `output/题库.json` 与 `output/题库对照解析.md`——这两份是整册转储，不属"归纳产物"。
+- **提交前扫描**：`grep -rIn "sk-…{12,}|Bearer …{16,}|\"apiKey\":\"非空\""` 覆盖 src/web/skills/test/tools/docs/config/README/HANDOFF，唯一命中是 `test/run.js:87` 的合成夹具 `sk-1234567890abcdef`（脱敏断言用，非真凭据）。
+- **自检**：`git clone . <tmp>` 后在干净克隆里跑 `node test/run.js` = **98/99**，唯一失败项是「输入目录可扫描且含 6 类角色」，它只在 `date1/` 缺失时失败——属预期。已在 README 新增「克隆后首次运行（必读）」表说明如何补语料与配置。
+- **未推送**：本机无 `gh`、无 credential helper、SSH 探测无响应，`git push` 需用户在自己环境完成。本地已到 `main` 分支 + `origin` 已配好，只差 `git push -u origin main`。
+- 注意：坑 30~32 与 §7 多处仍写「非 git 仓库、无版本回退」——那是当时的历史事实；现在有版本控制了，但**`.trash/` 未入库**，改 `data/` 前的备份习惯照旧保留。
+
+
 ---
 
 ## 9. 网页端真实浏览器验证（2026-10-05，headless Chromium + 自研 CDP 客户端）

@@ -14,6 +14,19 @@ node test/run.js                 # 99 项核心不变量自检（应全部通过
 node src/server.js               # 网页端，默认 http://127.0.0.1:8787
 ```
 
+### 克隆后首次运行（必读）
+
+本仓库**只含代码与归纳产物**，以下目录/文件被 `.gitignore` 排除，需要自备：
+
+| 项 | 为什么不在仓库里 | 怎么补 |
+| --- | --- | --- |
+| `date1/` | 第三方教辅的 OCR 文本（做题本 / 解析册 / 讲义 / 公式），版权内容不发布 | 把自己的 md 语料放进 `date1/`，再 `node src/cli.js index` 装配 |
+| `config/settings.json` | 生产模式会在此落 `llm.apiKey`，不能入库 | 复制 `.env.example` 配环境变量，或启动网页端后在「设置」页填写（页面展示一律经 `cfg.maskKey` 打码）；缺失时 `src/config.js` 回落内置 `DEFAULTS` |
+| `data/` `agent-work/` `agent-work-backup/` | 运行态与智能体工作包（体量大、内嵌题面原文） | 无需补：首次 `run` 会自动重建 |
+| `tools/exemplars-ch*/` | 各章实测脚本留档，内嵌题号与解析摘录 | 无需补：只是过程留档，不参与运行 |
+
+因此**干净克隆下 `node test/run.js` 是 98/99**——唯一失败项是「输入目录可扫描且含 6 类角色」，它在 `date1/` 不存在时必然失败；放入语料后即 99/99。归纳产物（手册 / 模板库 / 校验报告）在 `output/` 内可直接查看，其中 `output/题库.json` 与 `output/题库对照解析.md` 属整册转储，同样不发布。
+
 有两种运行模式，由 `EXAMGEN_MODE` 决定：
 
 ---
